@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Rajdilawar Demo Project</title>
+  <link rel="stylesheet" type="text/css" href="../style/buttonStyle.css">
+  <link rel="stylesheet" type="text/css" href="../style/menuBarStyle.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+</head>
+<body>
+<div class = "mainwrapper">
+  <div class="wrapper">
+    <nav class="flex-nav">
+      <a href="#" class="toggleNav"><i class="fa fa-bars" aria-hidden="true"></i> Menu</a>
+      <ul>
+        <li><a href="https://rajdilawar.github.io/rajdilawar/">About Me</a></li>
+        <li><a href="https://rajdilawar.github.io/rajdilawar/code/">Selenium POM and Java</a></li>
+        <li><a href="https://rajdilawar.github.io/rajdilawar/definitionsandterms/">Testing Terms</a></li>
+        <li><a href="https://rajdilawar.github.io/rajdilawar/reachme/">Contact Me</a></li>
+<!--        <li><a href="#">Fifth</a></li>-->
+<!--        <li><a href="#">Sixth</a></li>-->
+        <li class="social"><a href="https://github.com/rajdilawar/"><i class="fa fa-github"></i></a></li>
+        <li class="social"><a href="https://www.linkedin.com/in/rajdilawar/"><i class="fa fa-linkedin"></i></a></li>
+        <li class="social"><a href="https://www.xing.com/profile/RajdilawarSingh_Chandehok/cv"><i class="fa fa-xing-square"></i></a></li>
+        <li class="social"><a href="#"><i class="fa fa-code"></i></a></li>
+
+      </ul>
+    </nav>
+  </div>
+  <div class="contentWrapper">
+
+
+  <p>This web page contains various HTML elements for testing demo.</p>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script>
+
+    $(function() {
+      $('.toggleNav').on('click',function() {
+        $('.flex-nav ul').toggleClass('open');
+      });
+    });
+
+    function myFunction() {
+      var x = document.getElementById("myText").value;
+      document.getElementById("demo").innerHTML = x;
+    }
+
+  </script>
+
+
+
+  <fieldset>
+    <legend>Multi Select Checkbox and Radio Buttons</legend>
+    <div class="wrapper">
+      <div class="grid-row">
+        <label>
+          <input type="checkbox" value="impact" name="consult-sig-sme"> <span>This is a service that already exists in another segment</span>
+        </label>
+      </div>
+      <div class="grid-row">
+        <label>
+          <input type="checkbox" value="impact" name="consult-sig-sme"> <span>There are notable risks and/or concerns</span>
+        </label>
+      </div>
+      <div class="grid-row">
+        <label>
+          <input type="checkbox" value="impact" name="consult-sig-sme"> <span>There are constraints and/or dependencies of the service.</span>
+        </label>
+      </div>
+      <div class="grid-header">
+        <div class="header-item"></div>
+        <div class="header-item">
+          <div>Critical</div>
+        </div>
+        <div class="header-item">High</div>
+        <div class="header-item">Medium</div>
+        <div class="header-item">Low</div>
+      </div>
+      <div class="grid-row">
+        <div class="flex-item">Priority (Critical and High require justification)</div>
+        <label class="flex-item">
+          <input type="radio" value="critical" name="priority"> <span></span>
+        </label>
+        <label class="flex-item">
+          <input type="radio" value="high" name="priority"> <span></span>
+        </label>
+        <label class="flex-item">
+          <input type="radio" value="medium" name="priority"> <span></span>
+        </label>
+        <label class="flex-item">
+          <input type="radio" value="low" name="priority"> <span></span>
+        </label>
+      </div>
+
+      <div class="sig-section-comments">
+        <label>Comments</label>
+        <textarea rows=5></textarea>
+      </div>
+      <div>
+        <button class="btn btn-save">Save Progress</button>
+      </div>
+  </fieldset>
+
+
+
+    <fieldset>
+      <legend>Redirect to Rajdilawar Github Page</legend>
+      <div class="wrapper">
+        <form>
+          <button formaction="https://rajdilawar.github.io/rajdilawar/">Show Redirect!</button>
+        </form>
+      </div>
+    </fieldset>
+
+
+
+
+
+  <fieldset>
+    <legend>Radio Button, cooment Box and Submit button</legend>
+    <div class="wrapper">
+      <div class="grid-header">
+        <div class="header-item"></div>
+        <div class="header-item">
+          <div>Impact</div>
+        </div>
+        <div class="header-item">No Impact</div>
+        <div class="header-item">Not Reviewed</div>
+      </div>
+
+      <div class="grid-row">
+        <div class="flex-item">Adhoc Reporting</div>
+        <label class="flex-item">
+          <input type="radio" value="impact" name="adhoc-reporting"> <span></span>
+        </label>
+        <label class="flex-item">
+          <input type="radio" value="no-impact" name="adhoc-reporting"> <span></span>
+        </label>
+        <label class="flex-item">
+          <input type="radio" value="not-reviewed" name="adhoc-reporting"> <span></span>
+        </label>
+      </div>
+      <div class="grid-row">
+        <div class="flex-item">Quality Assurance</div>
+        <label class="flex-item">
+          <input type="radio" value="impact" name="art"> <span></span>
+        </label>
+        <label class="flex-item">
+          <input type="radio" value="no-impact" name="art"> <span></span>
+        </label>
+        <label class="flex-item">
+          <input type="radio" value="not-reviewed" name="art"> <span></span>
+        </label>
+      </div>
+      <div class="grid-row">
+        <div class="flex-item">Selenium</div>
+        <label class="flex-item">
+          <input type="radio" value="impact" name="xtrac"> <span></span>
+        </label>
+        <label class="flex-item">
+          <input type="radio" value="no-impact" name="xtrac"> <span></span>
+        </label>
+        <label class="flex-item">
+          <input type="radio" value="not-reviewed" name="xtrac"> <span></span>
+        </label>
+      </div>
+      <div class="grid-row">
+        <div class="flex-item">Cucumber BDD</div>
+        <label class="flex-item">
+          <input type="radio" value="impact" name="xtrac-reporting"> <span></span>
+        </label>
+        <label class="flex-item">
+          <input type="radio" value="no-impact" name="xtrac-reporting"> <span></span>
+        </label>
+        <label class="flex-item">
+          <input type="radio" value="not-reviewed" name="xtrac-reporting"> <span></span>
+        </label>
+      </div>
+      <div class="grid-row">
+        <div class="flex-item">Automation Testing</div>
+        <label class="flex-item">
+          <input type="radio" value="impact" name="xtrac-routing"> <span></span>
+        </label>
+        <label class="flex-item">
+          <input type="radio" value="no-impact" name="xtrac-routing"> <span></span>
+        </label>
+        <label class="flex-item">
+          <input type="radio" value="not-reviewed" name="xtrac-routing"> <span></span>
+        </label>
+      </div>
+      <div class="grid-row">
+        <div class="flex-item">Type of Testing</div>
+        <label class="flex-item">
+          <input type="radio" value="impact" name="xtrac-splits"> <span></span>
+        </label>
+        <label class="flex-item">
+          <input type="radio" value="no-impact" name="xtrac-splits"> <span></span>
+        </label>
+        <label class="flex-item">
+          <input type="radio" value="not-reviewed" name="xtrac-splits"> <span></span>
+        </label>
+      </div>
+    </div>
+    <div class="sig-section-comments">
+      <label>Comments</label>
+      <textarea rows=5></textarea>
+    </div>
+    <div>
+      <button class="btn btn-save">Save Progress</button>
+    </div>
+
+  </fieldset>
+
+
+
+  <fieldset>
+    <legend> Button On click Print message</legend>
+    <div class="wrapper">
+      <p>Example how to assert elements contains text in Selenium</p>
+
+
+      <div class="sig-section-comments">
+      <label>Write Commment and Print</label>
+      <textarea rows=5 id="myText"></textarea>
+
+        <p id="demo"></p>
+        <p>&nbsp;</p>
+    </div>
+    <div>
+      <button class="btn btn-save" onclick="myFunction()">Click Me and Print</button>
+    </div>
+  </fieldset>
+
+</div>
+</div>
+
+
+</body>
+</html>

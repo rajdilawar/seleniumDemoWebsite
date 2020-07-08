@@ -1,0 +1,75 @@
+/*Basic css property*/
+html{
+    box-sizing: content-box;
+}
+body{
+    background-image: linear-gradient(260deg, #95bb4f 0%, #8fcae5 100%);
+    font-style: sans-serif;
+}
+.wrapper{
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0px;
+}
+.contentWrapper{margin:0 auto;
+max-width:900px;}
+a{
+    color: white;
+    text-decoration: none;
+    background: rgba(0,0,0,0.2);
+    padding: 17px 0px;
+    display: inline-block;
+    width: 100%;
+    letter-spacing: 2px;
+    text-align: center;
+    transition: all 1s;
+}
+a:hover{
+    background: rgba(0,0,0,0.5);
+}
+.toggleNav {
+    display: none;
+}
+.flex-nav ul{
+    display: flex;
+    border: 1px solid black;
+    margin: 0;
+    padding: 0;
+    list-style:none;
+}
+.flex-nav li{
+    flex: 3;
+}
+.flex-nav .social{
+    flex: 1;
+}
+/*Responsive elements for different screens.*/
+
+@media all and (max-width:900px){
+    .flex-nav ul{
+        flex-wrap: wrap;
+    }
+    .flex-nav li{
+        flex: 1 1 50%;
+    }
+}
+@media all and (max-width:500px){
+    .flex-nav ul{
+        flex-wrap: wrap;
+    }
+    .flex-nav li{
+        flex: 1 1 100%;
+    }
+    .flex-nav .social{
+        flex: 1 1 50%;
+    }
+    .toggleNav {
+        display: block;
+    }
+    .flex-nav ul {
+        display: none;
+    }
+    .flex-nav ul.open {
+        display:flex;
+    }
+}
