@@ -4,9 +4,13 @@
 <head>
 
   <title>Rajdilawar Demo Project</title>
-  <link rel="stylesheet" type="text/css" href="style/buttonStyle.css">
-  <link rel="stylesheet" type="text/css" href="style/menuBarStyle.css">
+  <link rel="stylesheet" type="text/css" href="../style/buttonStyle.css">
+  <link rel="stylesheet" type="text/css" href="../style/menuBarStyle.css">
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <script src="../script/mainJavaScript.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+
 
 </head>
 <body>
@@ -19,7 +23,7 @@
         <li><a href="https://rajdilawar.github.io/rajdilawar/code/">Selenium POM and Java</a></li>
         <li><a href="https://rajdilawar.github.io/rajdilawar/definitionsandterms/">Testing Terms</a></li>
         <li><a href="https://rajdilawar.github.io/rajdilawar/reachme/">Contact Me</a></li>
-<!--        <li><a href="#">Fifth</a></li>-->
+        <li><a href="../html/formsFloatedLabel.html">Demo Form</a></li>
 <!--        <li><a href="#">Sixth</a></li>-->
         <li class="social"><a href="https://github.com/rajdilawar/"><i class="fa fa-github"></i></a></li>
         <li class="social"><a href="https://www.linkedin.com/in/rajdilawar/"><i class="fa fa-linkedin"></i></a></li>
@@ -35,73 +39,55 @@
   <p>This web page contains various HTML elements for testing demo.</p>
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script>
-
-    $(function() {
-      $('.toggleNav').on('click',function() {
-        $('.flex-nav ul').toggleClass('open');
-      });
-    });
-
-    function myFunction() {
-      var x = document.getElementById("myText").value;
-      document.getElementById("demo").innerHTML = x;
-    }
-
-  </script>
-
-
-
   <fieldset>
     <legend>Multi Select Checkbox and Radio Buttons</legend>
     <div class="wrapper">
       <div class="grid-row">
         <label>
-          <input type="checkbox" value="impact" name="consult-sig-sme"> <span>This is a service that already exists in another segment</span>
+          <input type="checkbox" id="1CheckBox" value="impact" name="consult-sig-sme"> <span>This is a service that already exists in another segment</span>
         </label>
       </div>
       <div class="grid-row">
         <label>
-          <input type="checkbox" value="impact" name="consult-sig-sme"> <span>There are notable risks and/or concerns</span>
+          <input type="checkbox" id="2CheckBox" value="impact" name="consult-sig-sme"> <span>There are notable risks and/or concerns</span>
         </label>
       </div>
       <div class="grid-row">
         <label>
-          <input type="checkbox" value="impact" name="consult-sig-sme"> <span>There are constraints and/or dependencies of the service.</span>
+          <input type="checkbox" id="3CheckBox" value="impact" name="consult-sig-sme"> <span>There are constraints and/or dependencies of the service.</span>
         </label>
       </div>
       <div class="grid-header">
         <div class="header-item"></div>
-        <div class="header-item">
+        <div class="header-item" id="critical">
           <div>Critical</div>
         </div>
-        <div class="header-item">High</div>
-        <div class="header-item">Medium</div>
-        <div class="header-item">Low</div>
+        <div class="header-item" id="hight">High</div>
+        <div class="header-item" id="medium">Medium</div>
+        <div class="header-item" id="low">Low</div>
       </div>
       <div class="grid-row">
         <div class="flex-item">Priority (Critical and High require justification)</div>
         <label class="flex-item">
-          <input type="radio" value="critical" name="priority"> <span></span>
+          <input type="radio" value="critical" name="priority" id="criticalRadio"> <span></span>
         </label>
         <label class="flex-item">
-          <input type="radio" value="high" name="priority"> <span></span>
+          <input type="radio" value="high" name="priority" id="highRadio"> <span></span>
         </label>
         <label class="flex-item">
-          <input type="radio" value="medium" name="priority"> <span></span>
+          <input type="radio" value="medium" name="priority" id="mediumRadio"> <span></span>
         </label>
         <label class="flex-item">
-          <input type="radio" value="low" name="priority"> <span></span>
+          <input type="radio" value="low" name="priority" id="lowRadio"> <span></span>
         </label>
       </div>
 
       <div class="sig-section-comments">
         <label>Comments</label>
-        <textarea rows=5></textarea>
+        <textarea rows=5 name="commentPriority"></textarea>
       </div>
       <div>
-        <button class="btn btn-save">Save Progress</button>
+        <button class="btn btn-save" name="buttonPriority" onclick="checkBoxOnClick()">Save Progress</button>
       </div>
   </fieldset>
 
@@ -115,10 +101,6 @@
         </form>
       </div>
     </fieldset>
-
-
-
-
 
   <fieldset>
     <legend>Radio Button, cooment Box and Submit button</legend>
@@ -227,12 +209,13 @@
       <label>Write Commment and Print</label>
       <textarea rows=5 id="myText"></textarea>
 
-        <p id="demo"></p>
-        <p>&nbsp;</p>
-    </div>
+        <p id="myTextToPrint"></p>
+        <p></p>
+      </div>
     <div>
-      <button class="btn btn-save" onclick="myFunction()">Click Me and Print</button>
+      <button class="btn btn-save" onclick="onClickButtonDisplayText()">Click Me and Print</button>
     </div>
+
   </fieldset>
 
 </div>
