@@ -2,13 +2,13 @@
 <html>
 
 <head>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <title>Rajdilawar Demo Project</title>
   <link rel="stylesheet" type="text/css" href="style/buttonStyle.css">
   <link rel="stylesheet" type="text/css" href="style/menuBarStyle.css">
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
   <script src="script/mainJavaScript.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
 
 
 
@@ -89,6 +89,7 @@
       <div>
         <button class="btn btn-save" name="buttonPriority" onclick="checkBoxOnClick()">Save Progress</button>
       </div>
+      <p id="checkedText" style="text-align: center"></p>
   </fieldset>
 
 
@@ -117,73 +118,73 @@
       <div class="grid-row">
         <div class="flex-item">Adhoc Reporting</div>
         <label class="flex-item">
-          <input type="radio" value="impact" name="adhoc-reporting"> <span></span>
+          <input type="radio" value="impact" name="Adhoc Reporting"> <span></span>
         </label>
         <label class="flex-item">
-          <input type="radio" value="no-impact" name="adhoc-reporting"> <span></span>
+          <input type="radio" value="no-impact" name="Adhoc Reporting"> <span></span>
         </label>
         <label class="flex-item">
-          <input type="radio" value="not-reviewed" name="adhoc-reporting"> <span></span>
+          <input type="radio" value="not-reviewed" name="Adhoc Reporting"> <span></span>
         </label>
       </div>
       <div class="grid-row">
         <div class="flex-item">Quality Assurance</div>
         <label class="flex-item">
-          <input type="radio" value="impact" name="art"> <span></span>
+          <input type="radio" value="impact" name="Quality Assurance"> <span></span>
         </label>
         <label class="flex-item">
-          <input type="radio" value="no-impact" name="art"> <span></span>
+          <input type="radio" value="no-impact" name="Quality Assurance"> <span></span>
         </label>
         <label class="flex-item">
-          <input type="radio" value="not-reviewed" name="art"> <span></span>
+          <input type="radio" value="not-reviewed" name="Quality Assurance"> <span></span>
         </label>
       </div>
       <div class="grid-row">
         <div class="flex-item">Selenium</div>
         <label class="flex-item">
-          <input type="radio" value="impact" name="xtrac"> <span></span>
+          <input type="radio" value="impact" name="Selenium"> <span></span>
         </label>
         <label class="flex-item">
-          <input type="radio" value="no-impact" name="xtrac"> <span></span>
+          <input type="radio" value="no-impact" name="Selenium"> <span></span>
         </label>
         <label class="flex-item">
-          <input type="radio" value="not-reviewed" name="xtrac"> <span></span>
+          <input type="radio" value="not-reviewed" name="Selenium"> <span></span>
         </label>
       </div>
       <div class="grid-row">
         <div class="flex-item">Cucumber BDD</div>
         <label class="flex-item">
-          <input type="radio" value="impact" name="xtrac-reporting"> <span></span>
+          <input type="radio" value="impact" name="Cucumber BDD"> <span></span>
         </label>
         <label class="flex-item">
-          <input type="radio" value="no-impact" name="xtrac-reporting"> <span></span>
+          <input type="radio" value="no-impact" name="Cucumber BDD"> <span></span>
         </label>
         <label class="flex-item">
-          <input type="radio" value="not-reviewed" name="xtrac-reporting"> <span></span>
+          <input type="radio" value="not-reviewed" name="Cucumber BDD"> <span></span>
         </label>
       </div>
       <div class="grid-row">
         <div class="flex-item">Automation Testing</div>
         <label class="flex-item">
-          <input type="radio" value="impact" name="xtrac-routing"> <span></span>
+          <input type="radio" value="impact" name="Automation Testing"> <span></span>
         </label>
         <label class="flex-item">
-          <input type="radio" value="no-impact" name="xtrac-routing"> <span></span>
+          <input type="radio" value="no-impact" name="Automation Testing"> <span></span>
         </label>
         <label class="flex-item">
-          <input type="radio" value="not-reviewed" name="xtrac-routing"> <span></span>
+          <input type="radio" value="not-reviewed" name="Automation Testing"> <span></span>
         </label>
       </div>
       <div class="grid-row">
         <div class="flex-item">Type of Testing</div>
         <label class="flex-item">
-          <input type="radio" value="impact" name="xtrac-splits"> <span></span>
+          <input type="radio" value="impact" name="Type of Testing"> <span></span>
         </label>
         <label class="flex-item">
-          <input type="radio" value="no-impact" name="xtrac-splits"> <span></span>
+          <input type="radio" value="no-impact" name="Type of Testing"> <span></span>
         </label>
         <label class="flex-item">
-          <input type="radio" value="not-reviewed" name="xtrac-splits"> <span></span>
+          <input type="radio" value="not-reviewed" name="Type of Testing"> <span></span>
         </label>
       </div>
     </div>
@@ -192,8 +193,9 @@
       <textarea rows=5></textarea>
     </div>
     <div>
-      <button class="btn btn-save">Save Progress</button>
+      <button class="btn btn-save" onclick="radioBoxOnClick()">Save Progress</button>
     </div>
+    <p id="radioButtonText" style="text-align: center"></p>
 
   </fieldset>
 
@@ -209,11 +211,12 @@
       <label>Write Commment and Print</label>
       <textarea rows=5 id="myText"></textarea>
 
-        <p id="myTextToPrint"></p>
-        <p></p>
+
+
       </div>
     <div>
       <button class="btn btn-save" onclick="onClickButtonDisplayText()">Click Me and Print</button>
+      <p id="myTextToPrint" style="text-align: center"></p>
     </div>
 
   </fieldset>
