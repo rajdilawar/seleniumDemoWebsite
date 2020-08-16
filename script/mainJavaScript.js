@@ -7,18 +7,33 @@ $(function() {
 });
 
 function checkBoxOnClick() {
+    var temp = "";
     $('input[type="checkbox"]:checked').next('span').each(function(){
         //console.log($(this).text());
         var textSelection = $(this).text();
-        document.getElementById("checkedText").innerHTML = textSelection;
-
+        if(temp === ""){
+            temp = textSelection;
+        }else{
+            temp = temp + "\n" + textSelection;
+        }
     });
+
+    document.getElementById("checkedText").innerHTML = "<pre>" + temp + "</pre>";
 }
 
 function radioBoxOnClick() {
-   var radioTextToDisplay = $("input:checked").val();
-    document.getElementById("radioButtonText").innerHTML = "Selected Radio Button is : " + radioTextToDisplay;
+    var TempValue='';
+    $('#radiogroup1').find('input[type="radio"]:checked').each(function(){
+        var radioName = this.name;
+        var radioValue = this.value;
 
+        if( TempValue === ''){
+            TempValue = radioName + ' : '+ radioValue;
+        }else {
+            TempValue = TempValue + ', ' + radioName + ' : '+ radioValue;
+        }
+    });
+    document.getElementById("radioButtonText").innerHTML = "Selected Radio Button(s) is/are : " + TempValue;
 }
 
 
